@@ -1,13 +1,13 @@
 #include <iostream>
 #include <fstream>
-#include <iomanip>cd ..
+#include <iomanip>
 
 using namespace std;
 
-int main()
+int main(int argc, char const *argv[])
 {
     fstream fin;
-    fin.open("20170205_163908_xst_sb157_30MHz.dat", ios_base::in | ios_base::binary);
+    fin.open(argv[1], ios_base::in | ios_base::binary);
     ofstream foutRe("re.txt");
     ofstream foutIm("im.txt");
     double real[192][192];
